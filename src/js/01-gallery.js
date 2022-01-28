@@ -21,13 +21,7 @@ function createImgGallery(galleryItems) {
     .join('');
 }
 
-// gallery.addEventListener('click', onOpenModal);
-
-function onOpenModal(ev) {
-  ev.preventDefault();
-
   new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionDelay: 250,
   }).open;
-}
