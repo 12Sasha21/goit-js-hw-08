@@ -14,10 +14,9 @@ function onFormInput() {
   formData = {
     email: refs.input.value,
     message: refs.textarea.value,
-    };
-    
+  };
+
   localStorage.setItem('feedback-form-state', JSON.stringify(formData));
-  return formData;
 }
 
 function populateForm() {
@@ -31,9 +30,8 @@ function populateForm() {
 
 function onFormSubmit(evt) {
   evt.preventDefault();
+  console.log(JSON.parse(localStorage.getItem('feedback-form-state')));
 
   evt.currentTarget.reset();
   localStorage.removeItem('feedback-form-state');
-
-  console.log(formData);
 }
