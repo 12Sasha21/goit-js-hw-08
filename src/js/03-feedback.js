@@ -32,6 +32,7 @@ function populateForm() {
 
 function onFormSubmit(evt) {
   evt.preventDefault();
+  
   console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
 
   evt.currentTarget.reset();
