@@ -10,7 +10,7 @@ const galleryMarkup = createImgGallery(galleryItems);
 gallery.insertAdjacentHTML('beforeend', galleryMarkup);
 
 function createImgGallery(galleryItems) {
-  return galleryItems.map(imgCardTpl).join('');
+  return imgCardTpl(galleryItems);
 }
 
 new SimpleLightbox('.gallery a', {
